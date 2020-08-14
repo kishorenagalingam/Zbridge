@@ -1,0 +1,139 @@
+
+.btn {
+    padding: 0.625rem 0 0.625rem 0;
+    font-size: 14px;
+    font-weight: 500;
+    &-primary {
+        background: @primary-color;
+
+        &:hover {
+            background: @primary-hover;
+        }
+        &:active,
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+
+    &-success {
+
+    }
+}
+
+
+.required {
+    color: @red;
+}
+
+
+
+.form-group {
+    position: relative;
+    label {
+        font-size: 13px;
+        color: @color-blue;
+        font-weight: 500;
+    }
+
+    .form-control {
+        height: 44px;
+        border-color: @light-gray;
+
+        &:focus {
+            border-color: @primary-color;
+            box-shadow: none;
+        }
+    }
+
+    &.password {
+        .field-group {
+            position: relative;
+        }
+        .form-control {
+            padding-right: 50px;
+        }
+        .icon-password {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+            z-index: 1;
+            cursor: pointer;
+            color: @color-gray;
+        }
+    }
+}
+
+
+.check-toggle {
+    padding-left: 0;
+
+    .form-check-input {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+    }
+
+    .form-check-label {
+        cursor: pointer;
+        font-size: 13px;
+        color: @text-regular;
+    }
+
+
+    input.form-check-input:checked + .form-check-label .slider {
+        background-color: @green;
+    }
+
+    input.form-check-input:checked + .form-check-label .slider:before {
+        -webkit-transform: translateX(6px);
+        -ms-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+
+
+    .slider {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 12px;
+        background-color: @light-gray;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            left: 2px;
+            bottom: 1px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        &.round {
+            border-radius: 34px;
+        }
+
+        &.round:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

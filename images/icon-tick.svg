@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <g id="tick" transform="translate(-90 -749)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(90 749)" fill="#fff" stroke="#0f1160" stroke-width="2">
+      <circle cx="75" cy="75" r="75" stroke="none"/>
+      <circle cx="75" cy="75" r="74" fill="none"/>
+    </g>
+    <path id="Path_1" data-name="Path 1" d="M55,0c30.376,0,30.376,110,0,110A55,55,0,0,1,55,0Z" transform="translate(110 769)" fill="#03d87f" opacity="0.497"/>
+    <path id="Icon_feather-check" data-name="Icon feather-check" d="M66.109,9,24.784,50.325,6,31.541" transform="translate(142.891 799.337)" fill="none" stroke="#525777" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

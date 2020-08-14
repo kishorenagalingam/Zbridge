@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="527" height="120" viewBox="0 0 527 120">
+  <g id="logo" transform="translate(-529 -368)">
+    <g id="text">
+      <text id="Zbridge" transform="translate(865 463)" fill="#fff" font-size="100" font-family="Eina04-Bold" font-weight="700"><tspan x="-190.65" y="0">Zbridge</tspan></text>
+    </g>
+    <g id="symbol">
+      <rect id="bg" width="120" height="120" rx="20" transform="translate(649 368) rotate(90)" fill="#fff"/>
+      <g id="shape-z" transform="translate(563.812 405)">
+        <path id="Path_1" data-name="Path 1" d="M29.187,58l28-28h-56Z" transform="translate(1 -30)" fill="#1886fb"/>
+        <path id="Path_2" data-name="Path 2" d="M29.187,58l28-28h-56Z" transform="translate(49.376 76) rotate(180)" fill="#004fe2"/>
+      </g>
+    </g>
+  </g>
+</svg>
