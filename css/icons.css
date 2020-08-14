@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'z-icon';
-  src:  url('../fonts/z-icon.eot?th0pbn');
-  src:  url('../fonts/z-icon.eot?th0pbn#iefix') format('embedded-opentype'),
-    url('../fonts/z-icon.ttf?th0pbn') format('truetype'),
-    url('../fonts/z-icon.woff?th0pbn') format('woff'),
-    url('../fonts/z-icon.svg?th0pbn#z-icon') format('svg');
+  src:  url('../fonts/icon/z-icon.eot?th0pbn');
+  src:  url('../fonts/icon/z-icon.eot?th0pbn#iefix') format('embedded-opentype'),
+    url('../fonts/icon/z-icon.ttf?th0pbn') format('truetype'),
+    url('../fonts/icon/z-icon.woff?th0pbn') format('woff'),
+    url('../fonts/icon/z-icon.svg?th0pbn#z-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
