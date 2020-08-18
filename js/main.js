@@ -6,6 +6,31 @@ $(document).ready(function() {
         });
     });
 
+
+    $('.menu-toggle').on('click', function(){
+        $('body').toggleClass('menu-slide');
+    })
+
+    let win = $(window),
+        winH = win.height(),
+        header = $('.header-navbar'),
+        headerHeight = header.height();
+
+        let navigation = $('.sidebar-menu .navigation'),
+        navgationHeight = winH - headerHeight;
+
+
+        
+
+        function sidebar(){
+            navigation.height(navgationHeight);
+        }
+        sidebar();
+
+        $(window).on('resize', function(){
+            sidebar();
+        })
+
     $('.form-group.password').each(function () {
         $(this).find('.field-group').append('<span class="icon-password icon-eye"/>');
 
