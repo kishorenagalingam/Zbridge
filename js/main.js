@@ -6,30 +6,26 @@ $(document).ready(function() {
         });
     });
 
+    $('.parent > a').on('click', function(e){
+        $(this).parent().siblings('.parent').find('.submenu').slideUp();
+        $(this).parent().find('.submenu').slideToggle();
+        $(this).parent('.parent').toggleClass('show');
+        e.preventDefault();
+    })
 
     $('.menu-toggle').on('click', function(){
         $('body').toggleClass('menu-slide');
+    });
+
+    var winW = $(window).width();
+
+    var mob = winW < 992 ? 'mobile-menu' : '';
+    $('body').toggleClass(mob);
+
+    $(window).on('resize', function(){
+        $('body').toggleClass(mob);
     })
 
-    let win = $(window),
-        winH = win.height(),
-        header = $('.header-navbar'),
-        headerHeight = header.height();
-
-        let navigation = $('.sidebar-menu .navigation'),
-        navgationHeight = winH - headerHeight;
-
-
-        
-
-        function sidebar(){
-            navigation.height(navgationHeight);
-        }
-        sidebar();
-
-        $(window).on('resize', function(){
-            sidebar();
-        })
 
     $('.form-group.password').each(function () {
         $(this).find('.field-group').append('<span class="icon-password icon-eye"/>');

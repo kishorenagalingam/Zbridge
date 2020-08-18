@@ -956,7 +956,7 @@ img {
   color: #ffffff;
 }
 .navbar-wrapper .navbar-container .dropdown-menu {
-  top: 52px !important;
+  top: 56px !important;
   padding: 0;
   margin: 0;
 }
@@ -1134,21 +1134,62 @@ img {
   -o-transition: all 0.5s ease 0s;
 }
 .page-main .sidebar-menu .navigation {
-  overflow-y: auto;
   height: calc(100vh - 74px);
 }
 .page-main .sidebar-menu .navigation .navbar-nav > li > a {
-  width: 280px;
+  white-space: nowrap;
+}
+.page-main .sidebar-menu .parent {
+  position: relative;
+}
+.page-main .sidebar-menu .parent .menu-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 54px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-main .sidebar-menu .parent .submenu {
+  display: none;
+  padding: 0;
+  background: #000250;
+}
+.page-main .sidebar-menu .parent .submenu li a {
+  padding-left: 50px;
 }
 .page-main .sidebar-menu ul li a {
   font-weight: 500;
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 12px 30px;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
+  position: relative;
 }
-.page-main .sidebar-menu ul li a:hover {
+.page-main .sidebar-menu ul li a::before {
+  content: '';
+  width: 0;
+  position: absolute;
+  top: 0;
   background: #1868FB;
+  height: 100%;
+  left: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.page-main .sidebar-menu ul li a:hover::before {
+  width: 100%;
+}
+.page-main .sidebar-menu ul li a i,
+.page-main .sidebar-menu ul li a span {
+  position: relative;
+  z-index: 1;
 }
 .page-main .sidebar-menu ul li a span {
   margin-left: 8px;
@@ -1196,6 +1237,7 @@ img {
   color: #7081b9;
   line-height: 36px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .page-main .main-content .js-btn {
   border-radius: 50%;
@@ -1264,13 +1306,39 @@ img {
 .menu-slide .main-content {
   margin-left: 60px;
 }
-.menu-slide .sidebar-menu .navbar-nav > li a {
-  padding: 15px 22px;
+.menu-slide .sidebar-menu {
+  z-index: 1;
 }
-.menu-slide .sidebar-menu .navbar-nav > li a span {
+.menu-slide .sidebar-menu .navbar-nav > li > a {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.menu-slide .sidebar-menu .navbar-nav > li > a > span {
   position: absolute;
   visibility: hidden;
   opacity: 0;
+}
+.menu-slide .sidebar-menu .navbar-nav > .parent:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+.menu-slide .sidebar-menu .navbar-nav > .parent > .submenu {
+  position: absolute;
+  display: block !important;
+  left: 100%;
+  top: 0;
+  list-style: none;
+  min-width: 250px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.menu-slide .sidebar-menu .navbar-nav > .parent > .submenu li a {
+  padding-left: 22px;
+  padding-right: 22px;
 }
 .dropdown {
   font-size: 13px;
@@ -1354,6 +1422,10 @@ img {
     -ms-flex: 0 0 700px;
     flex: 0 0 700px;
     max-width: 700px;
+  }
+  .page-main .sidebar-menu ul li a {
+    font-size: 16px;
+    padding: 15px 30px;
   }
   .page-main .main-content .add-data-wrapper .heading {
     font-size: 30px;
