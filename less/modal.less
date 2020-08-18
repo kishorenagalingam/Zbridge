@@ -1,0 +1,94 @@
+.modal {
+    position: absolute;
+    &-overlay,
+    &-backdrop {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: #000;
+        opacity: .5;
+        .transition(all 0.5s ease 0s);
+    }
+
+    &-dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .flex();
+        align-items: center;
+    }
+
+    &-header {
+        border: none;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 20px;
+        position: relative;
+        .modal-title {
+            color: @color-blue;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .close{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 0;
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            opacity: 1;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:before {
+                content: @icon-x;
+                font-family: @icomoon-font-family;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: normal;
+                color: @icon-color;
+            }
+
+            span {
+                .visually-hidden();
+            }
+        }
+    }
+
+    &-body {
+        padding: 0px 30px 30px;
+
+        .form-group { 
+            margin-bottom: 20px;
+        }
+    }
+
+    &-content {
+        border-radius: 8px;
+    }
+
+    &-open {
+        .modal-overlay {
+            display: block;
+        }
+    }
+
+    &.new-connector {
+        .modal-content {
+            max-width: 384px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
