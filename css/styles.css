@@ -1027,7 +1027,7 @@ img {
   -ms-flex: 0 0 280px;
   flex: 0 0 280px;
   max-width: 280px;
-  padding: 22px 25px;
+  padding: 20px 25px;
   text-align: center;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -1041,6 +1041,7 @@ img {
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
+  width: 132px;
 }
 .navbar-wrapper .navbar-header img {
   max-width: 132px;
@@ -1049,6 +1050,7 @@ img {
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
+  display: block;
 }
 .navbar-wrapper .navbar-container {
   -webkit-box-flex: 0;
@@ -1060,6 +1062,7 @@ img {
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   padding: 15px 30px;
+  border-bottom: 1px solid #bacee4;
 }
 .navbar-wrapper .navbar-container .left-side {
   flex-wrap: wrap;
@@ -1211,8 +1214,8 @@ img {
 }
 .navbar-wrapper .menu-toggle {
   color: #7081b9;
-  width: 25px;
-  height: 14px;
+  width: 18px;
+  height: 12px;
   padding: 0;
   margin-right: 20px;
   display: -webkit-box;
@@ -1302,6 +1305,9 @@ img {
 .page-main .sidebar-menu .parent .submenu li a span {
   margin-left: 0;
 }
+.page-main .sidebar-menu ul li.active > a {
+  background: #1868FB;
+}
 .page-main .sidebar-menu ul li a {
   font-weight: 500;
   color: #ffffff;
@@ -1324,7 +1330,7 @@ img {
   -o-transition: all 0.5s ease 0s;
 }
 .page-main .sidebar-menu ul li a:hover::before {
-  width: 100%;
+  width: 5px;
 }
 .page-main .sidebar-menu ul li a i,
 .page-main .sidebar-menu ul li a span {
@@ -1367,6 +1373,9 @@ img {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   margin: auto;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
 .page-main .main-content .add-data-wrapper .add-data-inner {
   display: inline-block;
@@ -1389,8 +1398,8 @@ img {
   justify-content: center;
   position: relative;
   white-space: nowrap;
-  height: 158px;
-  width: 158px;
+  height: 160px;
+  width: 160px;
   margin: 0 auto;
   color: #bacee4;
   font-weight: bold;
@@ -1401,7 +1410,6 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
   transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
-  border: 1px dashed #7081b9;
   font-size: 30px;
 }
 .page-main .main-content .js-btn:hover {
@@ -1414,6 +1422,18 @@ img {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-main .main-content .js-btn .circle-dashed {
+  width: 158px;
+  height: 158px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  border: 1px dashed #7081b9;
 }
 .page-main .main-content .js-btn .circle {
   stroke-dasharray: 301.59px 301.59px;
@@ -1430,7 +1450,7 @@ img {
   max-width: 60px;
 }
 .menu-slide .navbar-header {
-  padding: 22px 15px;
+  padding: 20px 15px;
 }
 .menu-slide .navbar-header a {
   overflow: hidden;
