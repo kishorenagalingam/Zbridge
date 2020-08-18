@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.preloader').delay(2000).addClass('active');
+    $('.preloader').addClass('active');
     $(window).load(function() {
         $('.preloader').delay(5000).fadeOut(function(){
             $('.img-info, .main-image').delay(6000).addClass('active');
