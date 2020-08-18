@@ -10,6 +10,7 @@ $(document).ready(function() {
         $(this).parent().siblings('.parent').find('.submenu').slideUp();
         $(this).parent().find('.submenu').slideToggle();
         $(this).parent('.parent').toggleClass('show');
+        $(this).parent().siblings('.parent').removeClass('show');
         e.preventDefault();
     })
 

@@ -18,12 +18,17 @@ img {
     max-width: 100%;
 }
 
-
-@import 'form.less';
-
 .page-wrapper {
     height: 100%;
 }
+
+
+@import 'form.less';
+@import 'modal.less';
+
+@import 'components/login.less';
+
+
 
 
 .preloader {
@@ -90,327 +95,7 @@ img {
     }
 } */
 
-.img-1.active  {
-	.keyframes(ani-1;{
-		0% {
-            transform: translate(-500px, 0) rotate(-45deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
 
-	.animation(ani-1 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-2.active  {
-	.keyframes(ani-2;{
-		0% {
-            transform: translate(-500px, -500px) rotate(-90deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-2 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-3.active  {
-	.keyframes(ani-3;{
-		0% {
-            transform: translate(-200px, -500px) rotate(45deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-3 4s ease 0s 1 normal forwards running);
-}
-
-.img-4.active  {
-	.keyframes(ani-4;{
-		0% {
-            transform: translate(0px, -500px) rotate(12deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-4 4s ease 0s 1 normal forwards running);
-}
-
-.img-5.active  {
-	.keyframes(ani-5;{
-		0% {
-            transform: translate(75px, 500px) rotate(12deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-5 4s ease 0s 1 normal forwards running);
-}
-
-.img-6.active  {
-	.keyframes(ani-6;{
-		0% {
-            transform: translate(75px, 500px) rotate(12deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-6 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-7.active  {
-	.keyframes(ani-7;{
-		0% {
-            transform: translate(75px, 400px) rotate(45deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-7 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-8.active  {
-	.keyframes(ani-8;{
-		0% {
-            transform: translate(-150px, 500px) rotate(90deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-8 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-9.active  {
-	.keyframes(ani-9;{
-		0% {
-            transform: translate(-150px, 500px) rotate(90deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-9 4s ease 0s 1 normal forwards running);
-}
-
-
-.img-10.active  {
-	.keyframes(ani-10;{
-		0% {
-            transform: translate(-150px,-35px) rotate(-25deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(ani-10 4s ease 0s 1 normal forwards running);
-}
-
-
-.main-image.active  {
-	.keyframes(main-image;{
-		0% {
-            transform: translate(100px, 800px) rotate(12deg);
-            opacity: 0;
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-            opacity: 1;
-        }
-        });
-
-	.animation(main-image 4s ease 0s 1 normal forwards running);
-}
-
-
-
-.login-wrapper {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    .left-pane {
-        background: @l-white;
-    }
-
-    .image-wrapper {
-        height: 100%;
-    }
-
-    .img-wrap-inner {
-        position: relative;
-
-        .img-info {
-            position: absolute;
-            text-align: center;
-            opacity: 0;
-            z-index: 1;
-
-            img {
-                max-width: 60%;
-            }
-        }
-
-        .img-1 {
-            top: -150px;
-            left: -50px;
-        }
-
-        .img-2 {
-            top: -80px;
-            left: 160px;
-        }
-
-        .img-3 {
-            top: -80px;
-            right: 170px;
-        }
-
-        .img-4 {
-            right: -15px;
-            top: -15px;
-        }
-
-        .img-5{
-            right: -65px;
-            top: 45%;
-        }
-
-        .img-6{
-            right: -100px;
-            bottom: -125px;
-        }
-
-        .img-7{
-            left: 200px;
-            bottom: -30px;
-        }
-
-        .img-8{
-            left: 0px;
-            bottom: -125px;
-        }
-
-        .img-9{
-            left: -20px;
-            bottom: 50px;
-        }
-        .img-10{
-            left: -160px;
-            top: 50px;
-        }
-
-        .main-image {
-            opacity: 0;
-            img {
-                max-width: 512px;
-                margin: 0 auto;
-            }
-        }
-    }
-
-
-
-    .right-pane {
-        width: 100%;
-        height: 100%;
-    }
-
-    .form-wrapper {
-        height: 100%;
-        overflow-y: auto;
-    }
-
-    .form-outer {
-        width: 100%;
-        margin: 30px 0;
-
-        .logo {
-            display: inline-block;
-        }
-
-        .header {
-            width: 100%;
-            text-align: center;
-            margin: 20px 0 40px;
-        }
-    }
-
-
-    .form-inner {
-        max-width: 384px;
-        border-radius: 8px;
-        box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.1);
-        background-color: @white;
-        padding: 30px;
-        margin: 0 auto;
-
-        .heading {
-            color: @color-blue;
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .additional {
-            margin-bottom: 1rem;
-            color: @color-gray;
-            font-size: 13px;
-
-            a {
-                color: inherit;
-                text-decoration: none;
-
-                &:hover {
-                    color: @primary-hover;
-                }
-            }
-        }
-    }
-}
 
 
 .header-navbar {
@@ -688,7 +373,19 @@ img {
                     .flex();
                     align-items: center;
                     justify-content: center;
+                    &:before {
+                        .transition(all 0.5s ease 0s);
+                    }
                 }
+
+                &.show {
+                    .menu-icon {
+                        &:before {
+                            .transform(rotate(90deg));
+                        }
+                    }
+                }
+
                 .submenu {
                     display: none;
                     padding: 0;
@@ -697,6 +394,9 @@ img {
                     li {
                         a {
                             padding-left: 50px;
+                            span {
+                                margin-left: 0;
+                            }
                         }
                     }
                 }
@@ -986,61 +686,12 @@ img {
             .flex-width(700px);
         }
     }
-
-    .page-main {
-        .sidebar-menu {
-            ul {
-                li {
-                    a {
-                        font-size: 16px;
-                        padding: 15px 30px;
-                    }
-                }
-            }
-        }
-        .main-content {
-            .add-data-wrapper {
-                .heading {
-                    font-size: 30px;
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 1200px) {
-    .login-wrapper {
-        .img-wrap-inner {
-            .main-image img {
-                max-width: 430px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .login-wrapper {
-        margin: 0;
-        position: static;
-        height: 100%;
-        .left-pane {
-            display: none;
-        }
-
-        .right-pane {
-            .flex-width(percentage(1));
-        }
-    }
 }
 
 
 @media screen and (max-width: 992px) {
-
-
     .page-main {
         .main-content {
-            
         }
     }
 

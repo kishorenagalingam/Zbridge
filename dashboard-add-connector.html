@@ -103,8 +103,16 @@
                                         <li><a class="nav-link" href="#"><span>Something else here</span></a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="icon-layers"></i><span>Connectors</span></a>
+                                <li class="nav-item parent">
+                                    <a class="nav-link" href="#"><i class="icon-layers"></i><span>Connectors</span>
+                                        <span class="menu-icon icon-chevron-right"></span>
+                                    </a>
+                                    
+                                    <ul class="submenu">
+                                        <li><a class="nav-link" href="#" data-toggle="modal" data-target="#addconnector"><span>Add Connector</span></a></li>
+                                        <li><a class="nav-link" href="#"><span>Another action</span></a></li>
+                                        <li><a class="nav-link" href="#"><span>Something else here</span></a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><i class="icon-settings"></i><span>Workflow Wizard</span></a>
@@ -128,26 +136,40 @@
                     </div>
                 </div>
                 <div class="main-content">
+                        <div class="modal-overlay"></div>
                         <div class="page-heading">
                             Integrations
                         </div>
 
-
-                        <div class="add-data-wrapper">
-                            <div class="add-data-inner">
-                                <div class="heading">‘Add New Connector’ to add an Integration</div>
-                                <div class="add-info">
-                                    <a href="#" class="js-btn" data-btn-scroll="true" data-btn-autoplay="play">
-                                        <svg width="160px" height="160px" viewBox="1 1 100 100" preserveAspectRatio="none">
-                                    <circle class="js-circle circle" cx="50" cy="50" r="48" stroke="white" stroke-width="3" fill="none"  />
-                                    </svg><i class="icon-plus"></i>
-                                    </a>
+                        <div class="connector-wrapper">
+                            <div class="modal fade new-connector" id="addconnector" tabindex="-1" role="dialog" aria-labelledby="addconnector" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addconnector">Connectors</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                      <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <select class="form-control" id="email" aria-describedby="nameHelp">
+                                                    <option value="">Select</option>
+                                                    <option value="one">One</option>
+                                                    <option value="two">Two</option>
+                                                    <option value="three">Three</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-block btn-primary">Save</button>
+                                        </form>
+                                    </div>
+                                  </div>
                                 </div>
-                            </div>
+                              </div>
                         </div>
                 </div>
             </main>
-        
     </div>
 
 <script src="js/jquery.min.js"></script>
