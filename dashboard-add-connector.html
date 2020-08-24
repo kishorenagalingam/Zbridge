@@ -72,7 +72,7 @@
                             </div>
                             <div class="dropdown account-dropdown">
                                 <a href="#" class="btn btn-primary dropdown-toggle" role="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="icon-user"></i><span>Super Admin</span>
+                                    <i class="icon-user d-md-none"></i><span class="d-none d-md-inline-block">Super Admin</span>
                                 </a>
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="account">
                                     <a class="dropdown-item" href="#"><i class="icon-user"></i>Edit Profile</a>
@@ -109,8 +109,18 @@
                                     </a>
                                     
                                     <ul class="submenu">
+                                        <li class="submenu-heading"><span>Connectors</span></li>
                                         <li><a class="nav-link" href="#" data-toggle="modal" data-target="#addconnector"><span>Add Connector</span></a></li>
-                                        <li><a class="nav-link" href="#"><span>Another action</span></a></li>
+                                        <li class="nav-item parent">
+                                            <a class="nav-link" href="#"><span>Another action</span>
+                                                <span class="menu-icon icon-chevron-right"></span>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a class="nav-link" href="#"><span>Action</span></a></li>
+                                                <li><a class="nav-link" href="#"><span>Another action</span></a></li>
+                                                <li><a class="nav-link" href="#"><span>Something else here</span></a></li>
+                                            </ul>
+                                        </li>
                                         <li><a class="nav-link" href="#"><span>Something else here</span></a></li>
                                     </ul>
                                 </li>
@@ -138,7 +148,22 @@
                 <div class="main-content">
                         <div class="modal-overlay"></div>
                         <div class="page-heading">
-                            Integrations
+                            <div class="page-title">Integrations</div> 
+                            <a href="#" class="btn btn-primary-bor btn-primary-bor-icon"><i class="icon icon-plus"></i><span class="">Add from Library</span></a>
+                        </div>
+
+                        <div class="add-data-wrapper">
+                            <div class="add-data-inner">
+                                <div class="heading">‘Add New Connector’ to add an Integration</div>
+                                <div class="add-info">
+                                    <a href="#" class="js-btn" data-btn-scroll="true" data-btn-autoplay="play">
+                                        <span class="circle-dashed"></span>
+                                        <svg width="160px" height="160px" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <circle class="js-circle circle" cx="50" cy="50" r="48" stroke="white" stroke-width="3" fill="none"  />
+                                    </svg><i class="icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="connector-wrapper">
