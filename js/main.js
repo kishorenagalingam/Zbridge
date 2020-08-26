@@ -13,6 +13,8 @@ $(document).ready(function() {
             });
         }
 
+        preloader();
+
         /* if ( !sessionStorage.getItem( 'doNotShow' ) ) {
             sessionStorage.setItem( 'doNotShow', true );
             preloader();
