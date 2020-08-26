@@ -100,19 +100,35 @@
         cursor: pointer;
         font-size: 13px;
         color: @text-regular;
+        line-height: normal;
     }
 
+    &.info-toggle {
+        input.form-check-input:checked + .form-check-label .slider {
+            background-color: @icon-color;
+        }
+    }
+
+    &.reverse-toggle {
+        input.form-check-input:checked + .form-check-label .slider:before {
+            .transform(translateX(-6px));
+        }
+
+        .slider {
+            &:before {
+                left: auto;
+                right: 2px;
+            }
+        }
+    }
 
     input.form-check-input:checked + .form-check-label .slider {
         background-color: @green;
     }
 
     input.form-check-input:checked + .form-check-label .slider:before {
-        -webkit-transform: translateX(6px);
-        -ms-transform: translateX(6px);
-        transform: translateX(6px);
+        .transform(translateX(6px));
     }
-
 
     .slider {
         position: relative;
@@ -141,6 +157,28 @@
 
         &.round:before {
             border-radius: 50%;
+        }
+    }
+
+    &-bg{
+
+        &.reverse-toggle {
+            input.form-check-input:checked + .form-check-label .slider:before {
+                .transform(translateX(-8px));
+            }
+        }
+        input.form-check-input:checked + .form-check-label .slider:before {
+            .transform(translateX(8px));
+        }
+        .slider {
+            width: 24px;
+            height: 16px;
+
+            &:before {
+                width: 12px;
+                height: 12px;
+                bottom: 2px;
+            }
         }
     }
 }
