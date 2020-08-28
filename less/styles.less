@@ -15,6 +15,10 @@ body {
     background: @l-white;
 }
 
+a {
+    color: @primary-color;
+}
+
 img {
     max-width: 100%;
 }
@@ -28,6 +32,15 @@ img {
 @import 'modal.less';
 
 @import 'components/login.less';
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
 
 
 body{
@@ -660,6 +673,48 @@ body{
                 border-radius: 8px;
                 border: 1px solid @light-gray;
                 margin-top: -1px;
+                padding: 0;
+
+                .grid-blk {
+                    padding: 15px 30px 30px;
+
+                    & + .grid-blk {
+                        border-left: 1px solid @light-gray;
+                    }
+                }
+
+                .info-wrapper {
+                    margin: 0;
+
+                    .heading {
+                        color: @color-blue;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+
+                    .content-info {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: flex-end;
+
+                        .btn {
+                            padding: 7px 14px;
+                            margin-top: 20px;
+                        }
+
+                        ul {
+                            list-style: none;
+                            padding-right: 15px;
+                            li {
+                                font-weight: 500;
+                                & + li {
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
 
@@ -872,8 +927,6 @@ body{
 
     .add-integration-wrapper {
         padding: 70px;
-
-
         .card {
             .add-inte-blk {
                 .heading {
@@ -1003,11 +1056,13 @@ body{
             left: -100%;
             z-index: 1;
             .transition(all 0.5s ease-in-out 0s);
+            top: 60px;
+            bottom: 0;
         }
         .main-content {
             margin-left: 0;
             .flex-width(100%);
-            height: ~"calc(100vh - 60px)";
+            height: 100%;
         }
     }
 
@@ -1027,14 +1082,23 @@ body{
         }
     }
 
+    .project-dropdown {
+        display: none;
+    }
+
     .page-main {
         .main-content {
             padding: 20px;
             .page-heading {
                 flex-wrap: wrap;
+            }
 
-                .btn {
-                    margin: 15px 0;
+            .page-title {
+                .flex-width(100%);
+                margin-bottom: 20px;
+
+                & + .btn {
+                    margin-left: 0;
                 }
             }
         }
@@ -1047,6 +1111,40 @@ body{
                 padding: 0px 15px 0;
             }
         }
+
+        .card {
+            .add-inte-blk {
+
+                :not(.site-status) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .heading {
+                    .flex-width(100%);
+                    border: none;
+                    border-bottom: 1px solid @light-gray;
+                }
+                .platform-info {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 
+}
+
+@media screen and (max-width: 767px) {
+    .add-integration-wrapper {
+        .card {
+            .card-body {
+                .grid-blk {
+                    & + .grid-blk {
+                        border-left: none;
+                        border-top: 1px solid @light-gray;
+                    }
+                }
+            }
+        }
+    }
 }
