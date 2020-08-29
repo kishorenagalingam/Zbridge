@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'z-icon';
-  src: url('../fonts/icon/z-icon.eot?mn7kqn');
-  src: url('../fonts/icon/z-icon.eot?mn7kqn#iefix') format('embedded-opentype'), url('../fonts/icon/z-icon.ttf?mn7kqn') format('truetype'), url('../fonts/icon/z-icon.woff?mn7kqn') format('woff'), url('../fonts/icon/z-icon.svg?mn7kqn#z-icon') format('svg');
+  src: url('../fonts/icon/z-icon.eot?km9izu');
+  src: url('../fonts/icon/z-icon.eot?km9izu#iefix') format('embedded-opentype'), url('../fonts/icon/z-icon.ttf?km9izu') format('truetype'), url('../fonts/icon/z-icon.woff?km9izu') format('woff'), url('../fonts/icon/z-icon.svg?km9izu#z-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -19,6 +19,9 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-down-arrow:before {
+  content: "\e94c";
 }
 .icon-grid:before {
   content: "\e900";
@@ -1515,7 +1518,7 @@ body {
   transition: all 0.5s ease 0s;
   background: #f3f6fb;
   margin-left: 280px;
-  height: calc(100vh - 71px);
+  /* height: ~"calc(100vh - 71px)"; */
   position: relative;
   padding: 20px 30px;
 }
@@ -1525,6 +1528,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+}
+.page-main .main-content .sub-heading {
+  margin-bottom: 15px;
+}
+.page-main .main-content .sub-heading .page-title {
+  font-size: 20px;
 }
 .page-main .main-content .page-title {
   font-size: 26px;
@@ -1620,7 +1629,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
   stroke: #1868FB;
 }
-/* 
+/*
         Add integration
     */
 .add-integration-wrapper {
@@ -1835,6 +1844,103 @@ body {
   font-size: 12px;
   line-height: normal;
 }
+.client-form {
+  background: #ffffff;
+  border: 1px solid #bacee4;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 705px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.client-form .fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.client-form .fieldset .btn-group,
+.client-form .fieldset .form-group {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 10px;
+}
+.client-form .fieldset .btn-group-wrap,
+.client-form .fieldset .form-group-wrap {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.client-form .fieldset .btn-group {
+  margin-top: 15px;
+}
+.registered-clients-wrap .client-name i {
+  font-size: 10px;
+  color: #0f1160;
+  margin-right: 5px;
+}
+.table-fixed-header {
+  overflow: auto;
+  position: relative;
+}
+.table-fixed-header table {
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+.table-fixed-header th,
+.table-fixed-header td {
+  padding: 20px;
+}
+thead tr th {
+  text-align: left;
+  position: relative;
+  z-index: 99;
+}
+table.table {
+  border: 1px solid #d6e1ef;
+}
+table td,
+table th {
+  padding: 18px;
+}
+table th {
+  color: #0f1160;
+  font-weight: 600;
+  background: #ffffff;
+}
+table td {
+  color: #525777;
+  font-weight: 500;
+}
+table td[data-th]:before {
+  content: attr(data-th);
+  display: block;
+  font-weight: 600;
+  padding-bottom: 10px;
+  display: none;
+}
+.table-bordered thead td,
+.table-bordered thead th {
+  border: 1px solid #d6e1ef;
+}
+.table-bordered th,
+.table-bordered td {
+  background: #ffffff;
+  border: 1px solid #d6e1ef;
+}
 .dropdown {
   font-size: 13px;
 }
@@ -1911,6 +2017,10 @@ body {
   border-top: 1px solid #bacee4;
 }
 @media screen and (min-width: 1440px) {
+  .table th,
+  .table td {
+    font-size: 16px;
+  }
   .login-wrapper .left-pane {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(100% - 700px);
@@ -2066,10 +2176,10 @@ body {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 20px;
   }
   .page-main .main-content .page-title + .btn {
     margin-left: 0;
+    margin-top: 20px;
   }
   .add-integration-wrapper {
     padding: 20px;
@@ -2091,6 +2201,13 @@ body {
   }
   .add-integration-wrapper .card .add-inte-blk .platform-info {
     margin-left: 0;
+  }
+  .client-form .fieldset .btn-group,
+  .client-form .fieldset .form-group {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
