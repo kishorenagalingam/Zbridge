@@ -1,7 +1,10 @@
 $(document).ready(function() {
 
-    new PerfectScrollbar('.no-touch .navigation');
-    new PerfectScrollbar('.no-touch .navigation .submenu');
+
+    if($('.navigation').length) {
+        new PerfectScrollbar('.no-touch .navigation');
+        new PerfectScrollbar('.no-touch .navigation .submenu');
+    }
 
     $('.preloader').addClass('active');
     $(window).load(function() {
@@ -97,7 +100,9 @@ $(document).ready(function() {
         }
     }
 
-    new PerfectScrollbar('.no-touch .table-fixed-header');
+    if($('.table-fixed-header').length) {
+        new PerfectScrollbar('.no-touch .table-fixed-header');
+    }
 
     veritcalScroll();
 
@@ -108,6 +113,9 @@ $(document).ready(function() {
 
 
     $('.form-group.password').each(function () {
+        if($(this).find('.field-group').length == 0) {
+            $(this).find('.form-control').wrap('<div class="field-group"/>');
+        }
         $(this).find('.field-group').append('<span class="icon-password icon-eye"/>');
 
         $('.icon-password').on('click', function (event) {

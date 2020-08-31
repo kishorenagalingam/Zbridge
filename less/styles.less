@@ -898,6 +898,79 @@ body{
         }
     }
 
+    .connector-wrap {
+     max-width: 745px;
+     margin: 0 auto;
+
+        .content-heading {
+            text-align: center;
+            margin-bottom: 40px;
+            color: @color-blue;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .card {
+            border-radius: 0;
+            overflow: hidden;
+            border: none;
+            margin-top: -1px;
+
+            &:first-child {
+                .card-header {
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+
+            &:last-child {
+                .card-header {
+                    border-radius: 0 0 4px 4px;
+                }
+            }
+
+            &-header {
+                border: 1px solid @light-gray;
+                cursor: pointer;
+                color: @primary-color;
+                font-weight: 600;
+            }
+            &-body {
+                border: 1px solid @light-gray;
+                margin-top: -1px;
+                padding: 30px;
+
+                .status-heading {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    color: @color-blue;
+                    font-weight: 600;
+                }
+            }
+            .btn-group {
+                align-items: center;
+                width: 100%;
+                margin-top: 15px;
+
+                .btn {
+                    max-width: 160px;
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+
+    .card {
+        &-header {
+            background: @white;
+        }
+
+        &-body {
+
+        }
+    }
+
 
     .table-fixed-header{
         overflow: auto;
@@ -1059,6 +1132,20 @@ body{
                     font-size: 16px;
                 }
                 .platform-info {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .connector-wrap {
+        .card{
+            &-header {
+                font-size: 16px;
+            }
+
+            &-body {
+                .status-heading {
                     font-size: 16px;
                 }
             }
@@ -1277,6 +1364,32 @@ body{
                     & + .grid-blk {
                         border-left: none;
                         border-top: 1px solid @light-gray;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .connector-wrap {
+        .card{
+            &-body {
+                .row {
+                    > div {
+
+                        & + div {
+                            position: relative;
+                            margin-top: 30px;
+                            padding-top: 30px;
+                            &::before {
+                                content: '';
+                                border-top: 1px solid @light-gray;
+                                position: absolute;
+                                left: -15px;
+                                right: -15px;
+                                top: 0;
+                            }
+                        }
                     }
                 }
             }
