@@ -936,8 +936,12 @@ body{
             &-header {
                 border: 1px solid @light-gray;
                 cursor: pointer;
-                color: @primary-color;
+                color: @color-blue;
                 font-weight: 600;
+
+                &[aria-expanded="true"] {
+                    color: @primary-color;
+                }
             }
             &-body {
                 border: 1px solid @light-gray;

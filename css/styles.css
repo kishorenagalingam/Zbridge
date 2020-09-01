@@ -1922,8 +1922,11 @@ body {
 .connector-wrap .card-header {
   border: 1px solid #bacee4;
   cursor: pointer;
-  color: #1868FB;
+  color: #0f1160;
   font-weight: 600;
+}
+.connector-wrap .card-header[aria-expanded="true"] {
+  color: #1868FB;
 }
 .connector-wrap .card-body {
   border: 1px solid #bacee4;
