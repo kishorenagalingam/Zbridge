@@ -1318,6 +1318,37 @@ body{
 }
 
 
+
+@media screen and (max-width: 768px) {
+    .connector-wrap {
+        .card-body {
+            .test-sec {
+                .fieldset {
+                    padding-right: 20px;
+                }
+            }
+
+            .live-sec {
+                .fieldset {
+                    padding-left: 20px;
+                    position: relative;
+                    &:before {
+                        background: @light-gray;
+                        height: 100%;
+                        position: absolute;
+                        left: -15px;
+                        top: 0;
+                        width: 1px;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
 @media screen and (max-width: 768px) {
 
     .dropdown {
