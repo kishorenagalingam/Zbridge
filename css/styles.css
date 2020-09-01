@@ -1529,6 +1529,10 @@ body {
   display: flex;
   align-items: center;
 }
+.page-main .main-content .page-heading .link-text {
+  margin-left: auto;
+  text-decoration: none;
+}
 .page-main .main-content .sub-heading {
   margin-bottom: 15px;
 }
@@ -1945,6 +1949,28 @@ body {
 .card-header {
   background: #ffffff;
 }
+.card-header.with-arrow {
+  position: relative;
+  padding-right: 50px;
+}
+.card-header.with-arrow:after {
+  content: "\e926";
+  font-family: "z-icon";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #7081b9;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.5s ease 0s;
+}
+.card-header.with-arrow[aria-expanded="true"]:after {
+  transform: rotateX(180deg);
+}
 .table-fixed-header {
   overflow: auto;
   position: relative;
@@ -2286,5 +2312,10 @@ table td[data-th]:before {
     left: -15px;
     right: -15px;
     top: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page-main .main-content .page-heading .link-text {
+    display: none;
   }
 }
