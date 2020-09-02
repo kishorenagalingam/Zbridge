@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-
-    if($('.navigation').length) {
-        new PerfectScrollbar('.no-touch .navigation');
-        new PerfectScrollbar('.no-touch .navigation .submenu');
-    }
-
     $('.preloader').addClass('active');
     $(window).load(function() {
         $('.img-info, .main-image').delay(6000).addClass('active');
@@ -78,14 +72,36 @@ $(document).ready(function() {
         }
     });
 
-    /* $('#fixed-table').DataTable( {
-        scrollY: 400,
-        scrollCollapse: true,
-        paging: false,
-        searching: false,
-        ordering: false,
-        info: false
-    } ); */
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    if(!isMobile.any()) {
+        if($('.navigation').length) {
+            new PerfectScrollbar('.navigation');
+            new PerfectScrollbar('.navigation .submenu');
+        }
+        if($('.table-fixed-header').length) {
+            new PerfectScrollbar('.table-fixed-header');
+        }
+    }
 
 
     $(".table-fixed-header").scroll(function(){
@@ -98,10 +114,6 @@ $(document).ready(function() {
             var items = $('.table-fixed-header tbody tr').outerHeight();
             $('.table-fixed-header').css('max-height', 5 * items);
         }
-    }
-
-    if($('.table-fixed-header').length) {
-        new PerfectScrollbar('.no-touch .table-fixed-header');
     }
 
     veritcalScroll();
@@ -129,4 +141,12 @@ $(document).ready(function() {
             }
         });
     });
+
+
+    $('.collapse').on('shown.bs.collapse', function () {
+        $(this).parent().addClass('active');
+    }).on('hidden.bs.collapse', function () {
+        $(this).parent().removeClass('active');
+    });
+
 });

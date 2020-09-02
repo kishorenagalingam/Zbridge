@@ -1919,14 +1919,14 @@ body {
 .connector-wrap .card:last-child .card-header {
   border-radius: 0 0 4px 4px;
 }
+.connector-wrap .card.active .card-header {
+  color: #1868FB;
+}
 .connector-wrap .card-header {
   border: 1px solid #bacee4;
   cursor: pointer;
   color: #0f1160;
   font-weight: 600;
-}
-.connector-wrap .card-header[aria-expanded="true"] {
-  color: #1868FB;
 }
 .connector-wrap .card-body {
   border: 1px solid #bacee4;
@@ -1949,6 +1949,9 @@ body {
   display: inline-block;
   margin: 0 auto;
 }
+.card.active .card-header:after {
+  content: "\e929";
+}
 .card-header {
   background: #ffffff;
 }
@@ -1969,10 +1972,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  transition: all 0.5s ease 0s;
-}
-.card-header.with-arrow[aria-expanded="true"]:after {
-  transform: rotateX(180deg);
 }
 .table-fixed-header {
   overflow: auto;
