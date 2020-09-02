@@ -1518,7 +1518,7 @@ body {
   transition: all 0.5s ease 0s;
   background: #f3f6fb;
   margin-left: 280px;
-  /* height: ~"calc(100vh - 71px)"; */
+  height: calc(100vh - 71px);
   position: relative;
   padding: 20px 30px;
 }
@@ -2239,7 +2239,6 @@ table td[data-th]:before {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
-    height: 100%;
   }
   .menu-slide .sidebar-menu {
     left: 0;
