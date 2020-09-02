@@ -1529,6 +1529,10 @@ body {
   display: flex;
   align-items: center;
 }
+.page-main .main-content .page-heading .link-text {
+  margin-left: auto;
+  text-decoration: none;
+}
 .page-main .main-content .sub-heading {
   margin-bottom: 15px;
 }
@@ -1892,6 +1896,83 @@ body {
   color: #0f1160;
   margin-right: 5px;
 }
+.connector-wrap {
+  max-width: 745px;
+  margin: 0 auto;
+}
+.connector-wrap .content-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0f1160;
+  font-size: 20px;
+  font-weight: 600;
+}
+.connector-wrap .card {
+  border-radius: 0;
+  overflow: hidden;
+  border: none;
+  margin-top: -1px;
+}
+.connector-wrap .card:first-child .card-header {
+  border-radius: 4px 4px 0 0;
+}
+.connector-wrap .card:last-child .card-header {
+  border-radius: 0 0 4px 4px;
+}
+.connector-wrap .card.active .card-header {
+  color: #1868FB;
+}
+.connector-wrap .card-header {
+  border: 1px solid #bacee4;
+  cursor: pointer;
+  color: #0f1160;
+  font-weight: 600;
+}
+.connector-wrap .card-body {
+  border: 1px solid #bacee4;
+  margin-top: -1px;
+  padding: 30px;
+}
+.connector-wrap .card-body .status-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f1160;
+  font-weight: 600;
+}
+.connector-wrap .card .btn-group {
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+.connector-wrap .card .btn-group .btn {
+  max-width: 160px;
+  display: inline-block;
+  margin: 0 auto;
+}
+.card.active .card-header:after {
+  content: "\e929";
+}
+.card-header {
+  background: #ffffff;
+}
+.card-header.with-arrow {
+  position: relative;
+  padding-right: 50px;
+}
+.card-header.with-arrow:after {
+  content: "\e926";
+  font-family: "z-icon";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #7081b9;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
 .table-fixed-header {
   overflow: auto;
   position: relative;
@@ -2042,6 +2123,12 @@ table td[data-th]:before {
   .add-integration-wrapper .card .add-inte-blk .platform-info {
     font-size: 16px;
   }
+  .connector-wrap .card-header {
+    font-size: 16px;
+  }
+  .connector-wrap .card-body .status-heading {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .menu-slide .navbar-header,
@@ -2159,6 +2246,24 @@ table td[data-th]:before {
   }
 }
 @media screen and (max-width: 768px) {
+  .connector-wrap .card-body .test-sec .fieldset {
+    padding-right: 20px;
+  }
+  .connector-wrap .card-body .live-sec .fieldset {
+    padding-left: 20px;
+    position: relative;
+  }
+  .connector-wrap .card-body .live-sec .fieldset:before {
+    background: #bacee4;
+    height: 100%;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 1px;
+    content: '';
+  }
+}
+@media screen and (max-width: 768px) {
   .dropdown-toggle {
     min-width: auto;
   }
@@ -2214,5 +2319,23 @@ table td[data-th]:before {
   .add-integration-wrapper .card .card-body .grid-blk + .grid-blk {
     border-left: none;
     border-top: 1px solid #bacee4;
+  }
+  .connector-wrap .card-body .row > div + div {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+  .connector-wrap .card-body .row > div + div::before {
+    content: '';
+    border-top: 1px solid #bacee4;
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page-main .main-content .page-heading .link-text {
+    display: none;
   }
 }
