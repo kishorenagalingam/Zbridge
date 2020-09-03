@@ -101,6 +101,10 @@ $(document).ready(function() {
         if($('.table-fixed-header').length) {
             new PerfectScrollbar('.table-fixed-header');
         }
+
+        if($('.new-integrations-scroll').length) {
+            new PerfectScrollbar('.new-integrations-scroll');
+        }
     }
 
 
@@ -113,6 +117,11 @@ $(document).ready(function() {
         if ($('.table-fixed-header tbody tr').length > 5) {
             var items = $('.table-fixed-header tbody tr').outerHeight();
             $('.table-fixed-header').css('max-height', 5 * items);
+        }
+
+        if ($('.new-integrations-scroll .new-integrations-blk').length > 3) {
+            var items = $('.new-integrations-scroll .new-integrations-blk').outerHeight();
+            $('.new-integrations-scroll').css('max-height', 3 * items);
         }
     }
 

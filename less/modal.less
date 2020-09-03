@@ -73,6 +73,11 @@
         }
     }
 
+    &-dialog{
+        max-width: none;
+        margin: 20px;
+    }
+
     &-content {
         border-radius: 8px;
     }
@@ -82,13 +87,11 @@
             display: block;
         }
     }
-
-    &.new-connector {
-        .modal-content {
-            max-width: 384px;
-            margin: 0 auto;
-        }
-    }
 }
 
 
+@media screen and (min-width: 1440px) {
+    .modal-body {
+        padding: 0px 70px 70px;
+    }
+}
